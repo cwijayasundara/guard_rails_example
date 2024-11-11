@@ -3,6 +3,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from guardrails import Guard
 from guardrails.hub import CompetitorCheck
+import warnings
+from dotenv import load_dotenv
+
+warnings.filterwarnings('ignore')
+_ = load_dotenv()
 
 model = ChatOpenAI(model="gpt-4o-mini")
 
